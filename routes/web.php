@@ -12,7 +12,10 @@
 */
 
 Route::get('/', function () {
-    
+
 
     return view('welcome');
 });
+
+Route::get('/movies', 'MoviesController@index')->name('movies.index');
+Route::get('/movies/{id}', 'MoviesController@show')->name('movies.show');
