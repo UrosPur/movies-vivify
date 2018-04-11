@@ -30,7 +30,7 @@
         <h1 class="jumbotron-heading">Movie list</h1>
         <p class="lead text-muted">This is a lsit of current available movies. You can always add one yoursef by clickin on the add link</p>
         <p>
-            <a href="#" class="btn btn-primary">add movie</a>
+            <a href="{{ route('movies.create') }}" class="btn btn-primary">add movie</a>
             {{--<a href="#" class="btn btn-secondary">Secondary action</a>--}}
         </p>
     </div>
