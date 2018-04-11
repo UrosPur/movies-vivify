@@ -38,6 +38,27 @@
         @endforelse
 
     </div>
+    <div>
+
+        <form method="POST" action="{{ route('comment-post', [ 'movie_id' => $movie->id ]) }}">
+            {{ csrf_field() }}
+
+            <div class="form-group">
+
+                <label for="content"> add comment</label>
+                <textarea id="content" name="content" class="form-control"></textarea>
+                @include('partials.error-message',['fieldTitle' => 'content'])
+
+            </div>
+
+            <div class="form-group">
+
+                <button type="submit" class="btn btn-primary"> submit comment</button>
+            </div>
+
+        </form>
+
+    </div>
 </section>
 
     @endsection
