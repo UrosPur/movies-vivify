@@ -1,16 +1,29 @@
-<ul>
+@extends('layouts.default')
 
-@foreach($movies as $movie)
+@section('title')
 
-<li>
-    {{ $movie->title }} </br>
+    all movies
 
-    {{ substr($movie->storyline,0,4) }}....</br>
+@endsection
 
-    <a href="{{ route('movies.show', ['id' => $movie->id]) }}">see more</a>
+@section('content')
+    <div class="album text-muted">
+        <div class="container">
 
-</li>
+            <div class="row">
 
-    @endforeach
+                @foreach($movies as $movie)
 
-</ul>
+                    <div class="card">
+                        <h3>{{ $movie->title }} </h3>
+                        <p class="card-text">{{ substr($movie->storyline,0,4) }}....</p>
+                        <a href="{{ route('movies.show', ['id' => $movie->id]) }}">see more</a>
+                    </div>
+
+                @endforeach
+
+            </div>
+
+        </div>
+    </div>
+@endsection
