@@ -15,7 +15,6 @@ class CommentController extends Controller
 
         $this->validate(request(), [
             'content' => 'required',
-
         ]);
 
 

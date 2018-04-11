@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Comment extends Model
 {
 
-    protected $fillable = [ 'contetn'];
+    protected $fillable = [ 'content'];
 
     public function movie(){
         return  $this->belongsTo('App\Movie');
