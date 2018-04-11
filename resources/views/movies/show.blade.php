@@ -21,6 +21,23 @@
 
 
     </div>
+
+    <div class="container">
+        <h4 class="jumbotron-heading">Comments</h4>
+        @forelse($movie->comment as $comment)
+
+            <li>
+                <p>{{ $comment->content }}</p>
+                <p>{{ $comment->created_at }}</p>
+            </li>
+
+        @empty
+            <li>
+                nema komentara
+            </li>
+        @endforelse
+
+    </div>
 </section>
 
     @endsection
