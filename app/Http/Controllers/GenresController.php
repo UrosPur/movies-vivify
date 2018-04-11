@@ -7,12 +7,14 @@ use App\Movie;
 
 class GenresController extends Controller
 {
-    public function show($id){
 
-        $movies = Movies::where('genre',$id)->find();
+    public function show($genre){
+
+        $movies = Movie::where('genre',$genre)->get();
 
 
-        return view('movies.')
+
+        return view('genres.show',compact('movies'));
     }
 
 

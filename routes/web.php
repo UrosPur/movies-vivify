@@ -25,4 +25,5 @@ Route::get('/movies/{id}', 'MoviesController@show')->name('movies.show');
 
 
 Route::post('/movies/{id}/comments', 'CommentController@store')->name('comment-post');
+Route::get('/genres/{genre}', 'GenresController@show')->name('genres.show');
 
